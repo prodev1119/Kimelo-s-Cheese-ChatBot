@@ -88,9 +88,9 @@ def display_products(products):
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
-        if "context" in message:
-            with st.expander("🧾 View Reference Products"):
-                display_products(message["context"])
+        # if "context" in message:
+        #     with st.expander("🧾 View Reference Products"):
+        #         display_products(message["context"])
 
 # Input logic
 if prompt := st.chat_input("Ask a question about cheese..."):
